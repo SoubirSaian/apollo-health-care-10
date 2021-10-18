@@ -10,10 +10,11 @@ const Services = () => {
         .then( res => res.json())
         .then( data =>  setMedicalServices(data));
     },[]);
+
     return (
-        <div>
-            <h2>Our Services</h2>
-             <div className="services">
+        <div className="container my-5">
+            <h2 className="text-center text-success border-bottom border-2 border-primary ">Our Services</h2>
+             <div className="row my-3">
                 {
                     medicalservices.map(service => <DisplayService key={service.id} service={service}></DisplayService>)
                 }  

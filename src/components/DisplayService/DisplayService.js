@@ -5,14 +5,14 @@ const DisplayService = (props) => {
     // console.log(props);
     const {name,img,description} = props.service;
     return (
-        <div className="display-service">
+        <div className="col-12 d-flex my-4 p-4 display-service">
             <div>
-                <img src={img} alt="" />
+                <img className="w-75" src={img} alt="" />
             </div>
-            <div>
-                <h3>{name}</h3>
-                <p>{description.slice(0,300)}</p>
-                <button>Details</button>
+            <div className="">
+                <h3 className="text-primary">{name}</h3>
+                <p><li>{description.slice(0,300)}</li></p>
+                <button className="btn btn-outline-success fw-bolder">More info</button>
             </div>
         </div>
     );

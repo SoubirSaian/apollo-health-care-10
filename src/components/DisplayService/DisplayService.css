@@ -1,12 +1,7 @@
 
 
-.display-service{
-    display: flex;
-    background-color: rgb(236, 232, 232);
-    padding: 10px;
-    margin: 15px 50px;
+ .display-service{
+    box-shadow: 3px 3px 7px gray;
 }
-div img{
-    width: 100%;
-}
+ 
 
