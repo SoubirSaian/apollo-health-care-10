@@ -9,8 +9,9 @@ const Services = () => {
         fetch('./localApi.JSON')
         .then( res => res.json())
         .then( data =>  setMedicalServices(data));
+        
     },[]);
-
+    
     return (
         <div className="container my-5">
             <h2 className="text-center text-success border-bottom border-2 border-primary ">Our Services</h2>
