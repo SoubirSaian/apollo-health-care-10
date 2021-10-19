@@ -1,6 +1,6 @@
 # Getting Started with react app and firebase authentication
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Apollo Health](https://apollo-health-care-a3b2a.web.app/home).
 
 ## Apollo Health Care
 
