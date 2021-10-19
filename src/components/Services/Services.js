@@ -6,7 +6,7 @@ const Services = () => {
     const [medicalservices,setMedicalServices] = useState([]);
 
     useEffect(()=>{
-        fetch('./localApi.JSON')
+        fetch('./localApi.json')
         .then( res => res.json())
         .then( data =>  setMedicalServices(data));
         
