@@ -18,7 +18,7 @@ const Service = () => {
     // console.log(details);
     return (
         <div>
-            <h2>service page details {serviceId}</h2>
+            
             {
                details && <ServiceDetail detail={details}></ServiceDetail>
             } 

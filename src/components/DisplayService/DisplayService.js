@@ -10,7 +10,7 @@ const DisplayService = (props) => {
             <div>
                 <img className="w-75" src={img} alt="" />
             </div>
-            <div className="">
+            <div>
                 <h3 className="text-primary">{name}</h3>
                 <p><li>{description.slice(0,300)}</li></p>
                 <Link to={`/service/${id}`}>

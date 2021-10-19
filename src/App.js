@@ -10,6 +10,8 @@ import Footer from './components/Footer/Footer';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Register from './components/Register/Register';
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
 
 function App() {
   return (
@@ -23,6 +25,12 @@ function App() {
             </Route>
             <Route path="/home">
               <Home></Home>
+            </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/contact">
+              <Contact></Contact>
             </Route>
             <Route path="/login">
               <Login></Login>

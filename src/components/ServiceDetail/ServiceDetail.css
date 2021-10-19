@@ -1,0 +1,15 @@
+
+.service-detail{
+    background-color: rgb(248, 245, 245);
+}
+.service-detail h2{
+    background-color: #237d9e;
+    color: white;
+    padding: 30px 0px;
+}
+.service-detail .image{
+    width: 60%;
+    padding: 30px;
+    margin: 25px auto;
+    
+}
