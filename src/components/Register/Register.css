@@ -1,0 +1,17 @@
+
+.register-page{
+    background-color: rgb(233, 227, 227);
+}
+
+.register-page input{
+    width: 500px;
+    columns: blue;
+}
+
+.form-submit{
+    background-color: yellowgreen;
+    border-radius: 5px;
+}
+.form-submit:hover{
+    background-color: rgb(12, 177, 94);
+}

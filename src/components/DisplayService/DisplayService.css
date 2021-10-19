@@ -5,5 +5,15 @@
     border-radius: 10px;
     background-color: white;
 }
+
+
+/* responsive ness  */
+
+@media only screen and (max-width : 992px) {
+    .display-service{
+        display: flex;
+        flex-direction: column;
+    }
+}
  
 

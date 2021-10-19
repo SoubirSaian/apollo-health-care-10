@@ -17,3 +17,16 @@
     text-decoration: none;
     
 }
+
+/* responsive  */
+
+@media only screen and (max-width : 688px){
+    .header-nav{
+        display: flex;
+        flex-direction: column;
+    }
+    .header-nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+}

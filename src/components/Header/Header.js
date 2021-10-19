@@ -6,7 +6,9 @@ import './Header.css';
 
 const Header = () => {
     const {user,logOut} = useAuth();
-
+    //  console.log(user);
+    //  const email = user.email;
+    //  const emailName = email.substring(0, email.lastIndexOf("@"));
     return (
         <div className="header-nav">
             <div>
@@ -17,7 +19,7 @@ const Header = () => {
                 <li><Link to="/about">About us</Link></li>
                 <li><Link to="/contact">Contact us</Link></li>
                 <li><Link to="/register">Register</Link></li>
-                <span>{user.displayName}</span>
+                <span>{user?.displayName}</span>
                 
                  {
                      user?.email ?  <button onClick={logOut}>Logout</button> :
