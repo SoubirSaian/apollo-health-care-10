@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './DisplayService.css';
 
+            // display all the services at the home page 
 const DisplayService = (props) => {
-    // console.log(props);
+    
     const {id,name,img,description} = props.service;
     return (
         <div className="col-12 d-flex my-4 p-4 display-service">

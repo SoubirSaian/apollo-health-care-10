@@ -12,6 +12,7 @@ const Header = () => {
      const email = user.email;
      const emailName = email?.substring(0, email?.lastIndexOf("@"));
 
+    //  header navigation bar logo and nav bar 
     return (
         <div className="header-nav">
             <div>

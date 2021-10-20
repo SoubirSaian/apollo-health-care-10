@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import ServiceDetail from '../ServiceDetail/ServiceDetail';
 
+    // display individual service details component 
 const Service = () => {
     const {serviceId} = useParams();
     const [service,setService] = useState([]);
@@ -12,7 +13,6 @@ const Service = () => {
             .then(data => setService(data));
     },[]);
      
-    // console.log(service);
     
     const details = service.find(({id}) => id === parseInt(serviceId));
     // console.log(details);

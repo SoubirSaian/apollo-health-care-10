@@ -1,10 +1,16 @@
 import React from 'react';
+import './NotFound.css';
+import notFoundImg from '../../images/404-not-found.png';
+import { Link } from 'react-router-dom';
 
+    //  notfound component page 
 const NotFound = () => {
     return (
-        <div className="m-5">
-            <h2 className="text-center text-danger">404</h2>
-            <h3 className="text-center text-danger">sorrry!!!! page not found</h3>
+        <div className="notFound-page">
+             <img className="w-100 h-75" src={notFoundImg} alt="" />
+             <Link to="/home">
+                <button className="btn btn-outline-primary button d-inline"> got to Home page</button>
+             </Link>
         </div>
     );
 };

@@ -2,6 +2,8 @@ import React from 'react';
 import './Footer.css';
 
 const Footer = () => {
+
+    //    footer section 
     return (
         <div className="footer ">
             <div className="d-flex flex-column justify-content-center align-items-center pt-5">

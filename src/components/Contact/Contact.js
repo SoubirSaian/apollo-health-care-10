@@ -1,7 +1,7 @@
 import React from 'react';
 import './Contact.css';
 
-
+    // contact page 
 const Contact = () => {
     return (
         <div className="container contact-page">

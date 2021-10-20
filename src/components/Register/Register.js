@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './Register.css';
 
+//    register page component 
 const Register = () => {
     const {error,inputPasswordHandle,inputEmailHandle,handleEmailPassword} = useAuth();
     return (
@@ -20,7 +21,7 @@ const Register = () => {
 
             </form>
             <br />
-            <p className="text-center pb-5">If you are already registered , go to <Link to="/login">Log In Page</Link></p>
+            <h5 className="text-center pb-5">If you are already registered , go to <Link to="/login">Log In Page</Link></h5>
         </div>
     );
 };

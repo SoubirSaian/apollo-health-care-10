@@ -3,6 +3,7 @@ import './BannerBottom.css';
 
 import image from "../../images/apollohealth-banner.jpg";
 
+//    second banner  details
 const BannerBottom = () => {
     return (
         <div className="row bottom-banner">

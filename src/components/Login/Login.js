@@ -6,8 +6,11 @@ import './Login.css';
 
 
 const Login = () => {
-    const {signInUsingGoogle,error,inputPasswordHandle,inputEmailHandle,handleEmailPassword} = useAuth();
+
+    // destructuring useAuth
+    const {signInUsingGoogle,error,inputPasswordHandle,inputEmailHandle,logInUsingEmailAndPassword} = useAuth();
     
+    // after log in direct to the details page
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/home';
@@ -15,24 +18,32 @@ const Login = () => {
     const handleGoogleLogIn = () => {
         signInUsingGoogle()
         .then((result) => {
-            
             history.push(redirect_uri);
         });
     }
+
+    //  const handleEmailPasswordLogin = () => {
+         
+    //      logInUsingEmailAndPassword()
+    //      .then(result => {
+    //           history.push(redirect_uri);
+    //      })
+    //  }
+
+    // login page component
     return (
         <div className="m-5 login-page">
             <h2 className="text-center">Please <span className="text-danger">Log In</span> for better experience</h2>
 
-            <form className="mx-auto w-25 pt-5" onSubmit={handleEmailPassword}>
+            <form className="mx-auto w-25 pt-5" onSubmit={logInUsingEmailAndPassword}>
                 
                 <input className="form-control fs-4 px-5" type="email" onBlur={inputEmailHandle} name="email" placeholder="enter your email..."/>
                 <br />
                 <input className="form-control fs-4" type="password" onBlur={inputPasswordHandle} name="password" placeholder="enter your password"/>
                 <br />
-                <input className="form-control fs-4 form-submit" type="submit" value="Log in" />
-                
-
+                <input className="login-submit fs-4 " type="submit" value="Log in" />
             </form>
+
             <br />
             <br /><br />
            <div className="google-login">

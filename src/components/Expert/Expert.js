@@ -1,6 +1,7 @@
 import React from 'react';
 import './Expert.css';
 
+    //  display all the expert Component individually 
 const Expert = (props) => {
     const {name,img,designation,specialist,location} = props.expert;
     return (

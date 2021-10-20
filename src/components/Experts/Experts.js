@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Expert from '../Expert/Expert';
 import './Experts.css';
+
+    // display all the expert in home page 
 const Experts = () => {
     const [experts,setExperts] = useState([]);
 

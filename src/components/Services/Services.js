@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import DisplayService from '../DisplayService/DisplayService';
 import './Services.css';
 
+//  home page service component 
 const Services = () => {
     const [medicalservices,setMedicalServices] = useState([]);
 
+    //   fetching fake data 
     useEffect(()=>{
         fetch('./localApi.json')
         .then( res => res.json())

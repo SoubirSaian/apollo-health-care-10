@@ -1,10 +1,9 @@
 import React from 'react';
 import './ServiceDetail.css';
 
+//   individual service display component 
 const ServiceDetail = (props) => {
-    // console.log(3000000);
-    // console.log(props);
-    // console.log(400000);
+     
     const {name,img,description,highlight} = props.detail;
     return (
         <div className="container service-detail">

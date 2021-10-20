@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../firebase/firebase.init";
-import {getAuth,GoogleAuthProvider,signInWithPopup,signOut,onAuthStateChanged,createUserWithEmailAndPassword} from "firebase/auth";
+import {getAuth,GoogleAuthProvider,signInWithPopup,signOut,onAuthStateChanged,createUserWithEmailAndPassword,signInWithEmailAndPassword} from "firebase/auth";
 
+    //    useFireBase component 
 
 initializeAuthentication();
 
@@ -15,6 +16,17 @@ const useFireBase = () =>{
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
+    // input password handling
+    const inputPasswordHandle = e =>{
+        setPassword(e.target.value);
+    }
+
+    // input email handling 
+    const inputEmailHandle = e =>{
+        setEmail(e.target.value);
+    }
+
+    // google sign in handling 
     const signInUsingGoogle = () =>{
         setIsLoading(true);
        return signInWithPopup(auth,googleProvider)
@@ -26,6 +38,26 @@ const useFireBase = () =>{
                 setIsLoading(false);
             });
     }
+
+    // email password log in handling 
+    const logInUsingEmailAndPassword = (e) => {
+        e.preventDefault();
+        
+        setIsLoading(true);
+
+       signInWithEmailAndPassword(auth,email,password)
+         .then(result => {
+             setUser(result.user);
+         })
+          .catch(error => {
+              setError(error.messege);
+          })
+          .finally(()=>{
+              setIsLoading(false);
+          })
+    }
+
+    // sign out handling 
     const logOut = () =>{
         setIsLoading(true);
         signOut(auth)
@@ -37,6 +69,7 @@ const useFireBase = () =>{
             });
     }
 
+    // auth observer 
     useEffect(()=>{
         onAuthStateChanged(auth, (user)=>{
             if(user){
@@ -48,19 +81,13 @@ const useFireBase = () =>{
             setIsLoading(false);
         });
     },[]);
+ 
 
-    const inputPasswordHandle = e =>{
-        setPassword(e.target.value);
-    }
-
-    const inputEmailHandle = e =>{
-        setEmail(e.target.value);
-    }
-
+    // register user using email & password handler 
     const handleEmailPassword = e =>{
         e.preventDefault();
 
-        console.log(email,password);
+        // password validation 
         if(password.length < 6){
             setError('password must bt at least 6 character');
             return;
@@ -70,7 +97,7 @@ const useFireBase = () =>{
             .then(result =>{
                 const user=result.user;
                 setUser(user);
-                console.log(user);
+                // console.log(user);
                 setError('');
             })
             .catch(error =>{
@@ -79,6 +106,7 @@ const useFireBase = () =>{
         
     }
 
+
     return{user,
         error,
         isLoading,
@@ -86,7 +114,9 @@ const useFireBase = () =>{
         logOut,
         inputPasswordHandle,
         inputEmailHandle,
-        handleEmailPassword};
+        handleEmailPassword,
+        logInUsingEmailAndPassword
+    };
 }
 
 export default useFireBase;
