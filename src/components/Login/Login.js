@@ -22,20 +22,20 @@ const Login = () => {
         });
     }
 
-    //  const handleEmailPasswordLogin = () => {
+     const handleEmailPasswordLogin = (e) => {
          
-    //      logInUsingEmailAndPassword()
-    //      .then(result => {
-    //           history.push(redirect_uri);
-    //      })
-    //  }
+         logInUsingEmailAndPassword(e)
+        //  .then(result => {
+              history.push(redirect_uri);
+        //  })
+     }
 
     // login page component
     return (
         <div className="m-5 login-page">
             <h2 className="text-center">Please <span className="text-danger">Log In</span> for better experience</h2>
 
-            <form className="mx-auto w-25 pt-5" onSubmit={logInUsingEmailAndPassword}>
+            <form className="mx-auto w-25 pt-5" onSubmit={handleEmailPasswordLogin}>
                 
                 <input className="form-control fs-4 px-5" type="email" onBlur={inputEmailHandle} name="email" placeholder="enter your email..."/>
                 <br />

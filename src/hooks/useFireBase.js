@@ -41,6 +41,7 @@ const useFireBase = () =>{
 
     // email password log in handling 
     const logInUsingEmailAndPassword = (e) => {
+        
         e.preventDefault();
         
         setIsLoading(true);
@@ -48,6 +49,7 @@ const useFireBase = () =>{
        signInWithEmailAndPassword(auth,email,password)
          .then(result => {
              setUser(result.user);
+             return true;
          })
           .catch(error => {
               setError(error.messege);
