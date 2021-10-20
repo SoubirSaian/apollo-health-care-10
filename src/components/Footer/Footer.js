@@ -5,6 +5,8 @@ const Footer = () => {
     return (
         <div className="footer ">
             <div className="d-flex flex-column justify-content-center align-items-center pt-5">
+                <p className="text-white">Contact : +91 8945993088, +91 7363800857</p>
+                <p className="text-white">email : apollo.service.2001@gmail.com</p>
                  <span>
                     <i className="fab fa-facebook-square social-icon"></i>
                     <i className="fab fa-twitter-square social-icon"></i>

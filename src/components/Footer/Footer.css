@@ -2,7 +2,8 @@
 
 .footer{
     background-color: #237d5e;
-    height: 200px;
+    height: auto;
+    padding: 30px;
 }
 
 .social-icon{

@@ -1,0 +1,16 @@
+
+
+.login-page{
+    background-color: rgb(236, 173, 162);
+    border-radius: 15px;
+}
+
+.login-page h2{
+    background-color: white;
+    padding-bottom: 15px;
+}
+
+.google-login{
+    padding-top: 25px;
+    background-color: white;
+}

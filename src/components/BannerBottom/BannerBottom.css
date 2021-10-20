@@ -1,0 +1,19 @@
+
+.bottom-banner{
+    background-color: white;
+    margin: 0px;
+}
+.bottom-banner h3{
+    color: #237d9e;
+}
+.bottom-banner h5{
+    color: #237d5e;
+}
+.bottom-banner .first-half{
+    margin-top: 20px;
+    padding-left: 30px;
+}
+.bottom-img{
+    width: 100%;
+    height: 90%;
+}

@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: #cae8f3;
 }
 
 .header-nav ul{
@@ -15,8 +16,15 @@
 }
 .header-nav ul li a {
     text-decoration: none;
-    
+    font-weight: 700;
+    /* padding: 15px; */
+    color: #237d9e;
+    /* background-color: #237d5e; */
+    /* border-radius: 5px; */
 }
+/* .header-nav ul li a:hover{
+    background-color: #237d9e;
+} */
 
 /* responsive  */
 
